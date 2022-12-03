@@ -1,0 +1,33 @@
+{
+  "name": "ravebot",
+  "version": "1.0.0",
+  "description": "Ravemon's Bot",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EnHawk/Ravebot.git"
+  },
+  "keywords": [
+    "ravebot",
+    "ravemon",
+    "ravemon-gaming",
+    "ravemon-gaming-official-server"
+  ],
+  "author": "enlight_hawk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EnHawk/Ravebot/issues"
+  },
+  "homepage": "https://github.com/EnHawk/Ravebot#readme",
+  "dependencies": {
+    "discord.js": "^14.7.0",
+    "mongodb": "^4.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
