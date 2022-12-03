@@ -22,3 +22,6 @@ client.on(`ready`, () => {
 client.login(config.TOKEN)
     .catch((error) => { return console.error(error) });
 // Discord.js part
+
+module.exports = { config, mongoClient, Discord, client };
+// Exports
