@@ -4,7 +4,7 @@ const config = require(`../config.json`)
 const { MongoClient } = require(`mongodb`);
 const mongodb = new MongoClient(config.DB_URI);
 
-mongoClient.connect()
+mongodb.connect()
     .then(() => console.log(`Successfully connected to MongoDB.`))
     .catch((error) => { return console.error(error) });
 // MongoDB setup
