@@ -25,3 +25,10 @@ client.login(config.TOKEN)
 
 module.exports = { config, mongodb, Discord, client };
 // Exports
+
+function handle(handler) {
+    require(handler);
+};
+
+handle(`./utils/cmdHandler.js`) // Handles Command
+// Handlers and stuff
