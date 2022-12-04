@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon .",
-    "stop": "echo Server Stopped && exit 1"
+    "stop": "echo Log: Server Stopped && exit 1"
   },
   "repository": {
     "type": "git",
