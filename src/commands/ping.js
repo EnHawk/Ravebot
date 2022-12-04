@@ -1,0 +1,23 @@
+const { Discord, client, mongodb } = require(`../index`);
+// Module Imports
+
+module.exports = {
+    data: new Discord.SlashCommandBuilder()
+        .setName(`ping`)
+        .setDescription(`Shows the Websocket's latency.`),
+    execute: async (i) => {
+        const ping = client.ws.ping;
+        const embed = new Discord.EmbedBuilder()
+            .setDescription(`🏓 **Current Ping: __${ping}__**`);
+        
+        if (ping <= 50) {
+            embed.setColor(`Green`);
+        } else if (ping <= 100) {
+            embed.setColor(`Yellow`);
+        } else {
+            embed.setColor(`Red`);
+        };
+
+        await i.reply({ embeds: [ embed ] });
+    }
+}

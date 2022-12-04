@@ -2,7 +2,7 @@ const config = require(`../config.json`)
 // Environment variables setup
 
 const { MongoClient } = require(`mongodb`);
-const mongoClient = new MongoClient(config.DB_URI);
+const mongodb = new MongoClient(config.DB_URI);
 
 mongoClient.connect()
     .then(() => console.log(`Successfully connected to MongoDB.`))
@@ -23,5 +23,5 @@ client.login(config.TOKEN)
     .catch((error) => { return console.error(error) });
 // Discord.js part
 
-module.exports = { config, mongoClient, Discord, client };
+module.exports = { config, mongodb, Discord, client };
 // Exports

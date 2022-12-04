@@ -13,27 +13,6 @@ const commandFiles = fs.readdirSync(`./src/commands`)
 const commands = [];
 let command;
 
-const exampleCommand = {
-    data: new Discord.SlashCommandBuilder()
-        .setName(`ping`)
-        .setDescription(`Shows the Websocket's ping.`),
-    execute: async (i) => {
-        const ping = client.ws.ping;
-        const embed = new Discord.EmbedBuilder()
-            .setDescription(`🏓 **Current ping is __${ping}__**`);
-        
-        if (ping <= 50) {
-            embed.setColor(`Green`);
-        } else if (ping <= 100) {
-            embed.setColor(`Yellow`);
-        } else {
-            embed.setColor(`Red`);
-        };
-
-        await i.reply({ embeds: [ embed ] });
-    }
-};
-
 commandFiles.forEach((file) => {
     command = require(`../commands/${file}`);
     
@@ -50,25 +29,16 @@ client.on(`ready`, async () => {
 
     await rest.put(
         Routes.applicationCommands(client.user.id),
-        { body: [ exampleCommand.data.toJSON() ] }
-    ).catch((error) => { return console.error(error) });
-
-    await rest.put(
-        Routes.applicationGuildCommands(client.user.id, config.GUILD_ID),
         { body: commands }
-    ).catch((error) => { return console.error(error); });
+    ).catch((error) => { return console.error(error) });
 
     console.log(`Successfully loaded ${commands.length} application (/) commands.`)
 });
 
 client.on(`interactionCreate`, async (interaction) => {
-    interaction.reply({ content })
     command = client.commands.get(interaction.commandName);
 
     try {
-        if (interaction.commandName === `ping`) {
-            exampleCommand.execute(interaction);
-        };
         if (interaction.isCommand) {
             command.execute(interaction);
         }
