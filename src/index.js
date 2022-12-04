@@ -30,5 +30,6 @@ function handle(handler) {
     require(handler);
 };
 
-handle(`./utils/cmdHandler.js`) // Handles Command
+handle(`./utils/cmdHandler.js`) // Handle Commands
+
 // Handlers and stuff
