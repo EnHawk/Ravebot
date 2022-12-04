@@ -1,5 +1,5 @@
 const { Discord, client, mongodb } = require(`../index`);
-// Module Imports
+// Module imports
 
 module.exports = {
     data: new Discord.SlashCommandBuilder()
@@ -21,3 +21,4 @@ module.exports = {
         await i.reply({ embeds: [ embed ] });
     }
 }
+// Module exports
