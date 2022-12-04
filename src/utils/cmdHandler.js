@@ -30,9 +30,9 @@ client.on(`ready`, async () => {
     await rest.put(
         Routes.applicationCommands(client.user.id),
         { body: commands }
-    ).catch((error) => { return console.error(error) });
-
-    console.log(`Successfully loaded ${commands.length} application (/) commands.`)
+    )
+    .then(() => { return console.log(`Successfully loaded ${commands.length} application (/) commands.`) })
+    .catch((error) => { return console.error(error) });
 });
 
 client.on(`interactionCreate`, async (interaction) => {
