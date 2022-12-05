@@ -2,7 +2,7 @@
 Ravebot's official source code. Mainly for (Ravemon Gaming Official Discord Server)[https://discord.gg/d4MvgAAx7B].
 
 # Releases
-* (v1.0.0)[https://github.com/EnHawk/Ravebot/releases/tag/v1.0.0]
+* [v1.0.0](https://github.com/EnHawk/Ravebot/releases/tag/v1.0.0)
 
 # Guide
 If you're going to install the source code for your workspace, here are some guides
