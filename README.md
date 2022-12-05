@@ -1,6 +1,7 @@
 <h1 align="center">
   <b>
     <img src="https://cdn.discordapp.com/attachments/880382867283247124/985888398533361674/sticker_1622513385543.png" width="50%" height="50%">
+    <br>
     <a href="https://github.com/EnHawk/Ravebot">Ravebot's Official Source Code Repository</a>
   </b>
 </h1>
