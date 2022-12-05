@@ -33,4 +33,4 @@ If you're going to install the source code for your workspace, here are some gui
 ```
 
 # Social Media
-* <a href="https://discord.gg/d4MvgAAx7B"><img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321471127863306/discord-mark-blue.png" width="50%" height="50%"></a>
+* <a href="https://discord.gg/d4MvgAAx7B"><img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321471127863306/discord-mark-blue.png" width="25%" height="25%"></a>
