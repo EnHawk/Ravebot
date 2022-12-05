@@ -32,5 +32,16 @@ If you're going to install the source code for your workspace, here are some gui
 }
 ```
 
-# Social Media
-* <a href="https://discord.gg/d4MvgAAx7B"><img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321471127863306/discord-mark-blue.png" width="25%" height="25%"></a>
+<h1 align="center">
+  <a href="https://discord.gg/d4MvgAAx7B">
+    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321471127863306/discord-mark-blue.png" width="25%" height="25%">
+  </a>
+
+  <a href="https://www.youtube.com/@ravemongaming">
+    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321966483542016/youtube-logo.png">
+  </a>
+
+  <a href="https://twitter.com/RavemonGaming">
+    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321470838448190/Twitter-logo.png" width="25%" height="25%">
+  </a>
+</h1>
