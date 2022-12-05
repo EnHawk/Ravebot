@@ -13,7 +13,7 @@
 If you're going to install the source code for your workspace, here are some guides
 * Make sure you have [Node.js](https://nodejs.org) installed.
 * On config.json, rename the values based on the instruction.
-```json
+```jsonc
 {
     "TOKEN": "<BOT_TOKEN>",
     /* Replace <BOT_TOKEN> with the bot's token.
