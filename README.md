@@ -40,7 +40,7 @@ If you're going to install the source code for your workspace, here are some gui
   </a>
 
   <a href="https://www.youtube.com/@ravemongaming">
-    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321966483542016/youtube-logo.png">
+    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321966483542016/youtube-logo.png" width="50%" height="50%">
   </a>
 
   <a href="https://twitter.com/RavemonGaming">
