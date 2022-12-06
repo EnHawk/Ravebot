@@ -12,7 +12,7 @@ module.exports = {
             .then((data) => { return `*${data[0].q}*\n-${data[0].a}` });
         const embed = new Discord.EmbedBuilder()
             .setDescription(quote)
-            .setColor(`DarkGrey`);
+            .setColor(`DarkButNotBlack`);
         
         await i.reply({ embeds: [ embed ] });
     }
