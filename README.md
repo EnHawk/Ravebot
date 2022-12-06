@@ -44,6 +44,6 @@ If you're going to install the source code for your workspace, here are some gui
   </a>
 
   <a href="https://twitter.com/RavemonGaming">
-    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321470838448190/Twitter-logo.png" width="20%" height="20%">
+    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321470838448190/Twitter-logo.png" width="15%" height="15%">
   </a>
 </h1>
