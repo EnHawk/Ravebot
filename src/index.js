@@ -6,7 +6,7 @@ const mongodb = new MongoClient(config.DB_URI);
 
 mongodb.connect()
     .then(() => console.log(`Successfully connected to MongoDB.`))
-    .catch((error) => { return console.error(error) });
+    .catch(error => { return console.error(error) });
 // MongoDB setup
 
 const Discord = require(`discord.js`);
@@ -20,16 +20,13 @@ client.on(`ready`, () => {
 });
 
 client.login(config.TOKEN)
-    .catch((error) => { return console.error(error) });
+    .catch(error => { return console.error(error) });
 // Discord.js part
 
 module.exports = { config, mongodb, Discord, client };
 // Exports
 
-function handle(handler) {
-    require(handler);
-};
+client.handleCommands = () => { require(`./utils/cmdHandler`) };
 
-handle(`./utils/cmdHandler.js`) // Handle Commands
-
+client.handleCommands();
 // Handlers and stuff
