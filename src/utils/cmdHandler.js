@@ -1,4 +1,4 @@
-const { config, Discord, client } = require(`../index`);
+const { config, Discord, client, file } = require(`../index`);
 const fs = require(`fs`);
 // Imports
 
@@ -13,7 +13,7 @@ const commandFiles = fs.readdirSync(`./src/commands`)
 const commands = [];
 let command;
 
-commandFiles.forEach((file) => {
+for (file in commandFiles) {
     command = require(`../commands/${file}`);
     
     if ((`data` && `execute`) in command) {
@@ -21,8 +21,8 @@ commandFiles.forEach((file) => {
         commands.push(command.data.toJSON());
     } else {
         return console.error(`Missing property(s) in /src/commands/${file}`);
-    };
-});
+    }
+};
 
 client.on(`ready`, async () => {
     console.log(`Refreshing application (/) commands.`);
