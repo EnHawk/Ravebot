@@ -1,11 +1,11 @@
-const { Discord, client, mongodb } = require(`../index`);
+const { Discord, client } = require(`../index`);
 // Module imports
 
 module.exports = {
     data: new Discord.SlashCommandBuilder()
         .setName(`ping`)
         .setDescription(`Shows the Websocket's latency.`),
-    execute: async (i) => {
+    async execute (i) {
         const ping = client.ws.ping;
         const embed = new Discord.EmbedBuilder()
             .setDescription(`🏓 **Current Ping: __${ping}__**`);
