@@ -8,7 +8,7 @@ const rest = new REST({ version: `10` }).setToken(config.TOKEN);
 
 client.commands = new Collection();
 const commandFiles = fs.readdirSync(`./src/commands`)
-    .filter((file) => file.endsWith(`.js`));
+    .filter(file => file.endsWith(`.js`));
 
 const commands = [];
 let command;
@@ -32,18 +32,13 @@ client.on(`ready`, async () => {
         { body: commands }
     )
     .then(() => { return console.log(`Successfully loaded ${commands.length} application (/) commands.`) })
-    .catch((error) => { return console.error(error) });
+    .catch(error => { return console.error(error) });
 });
 
 client.on(`interactionCreate`, async (interaction) => {
     command = client.commands.get(interaction.commandName);
 
-    try {
-        if (interaction.isCommand) {
-            command.execute(interaction);
-        }
-    } catch (error) {
-        console.error(error);
-        await interaction.reply(`An error occured upon executing the command.`, { ephemeral: true })
+    if (interaction.isChatInputCommand()) {
+        command.execute(interaction);
     }
 });
