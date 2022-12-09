@@ -1,6 +1,6 @@
 const { Discord } = require(`../index`);
 const axios = require(`axios`).default;
-// Module imports
+// Imports
 
 module.exports = {
     data: new Discord.SlashCommandBuilder()
