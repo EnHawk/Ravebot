@@ -68,7 +68,7 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# environment variables file
+# Environment variables file
 config.json
 
 # parcel-bundler cache (https://parceljs.org/)
