@@ -55,7 +55,7 @@ client.on(`ready`, async () => {
     .catch(error => { return console.error(error) });
 });
 
-client.on(`interactionCreate`, async (interaction) => {
+client.on(`interactionCreate`, interaction => {
     command = client.commands.get(interaction.commandName);
 
     if (interaction.isChatInputCommand()) {
