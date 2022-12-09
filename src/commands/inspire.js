@@ -3,6 +3,7 @@ const axios = require(`axios`).default;
 // Imports
 
 module.exports = {
+    category: `other`,
     data: new Discord.SlashCommandBuilder()
         .setName(`inspire`)
         .setDescription(`Tells a motivational quotes`),

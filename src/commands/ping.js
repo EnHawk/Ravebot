@@ -2,6 +2,7 @@ const { Discord, client } = require(`../index`);
 // Imports
 
 module.exports = {
+    category: `other`,
     data: new Discord.SlashCommandBuilder()
         .setName(`ping`)
         .setDescription(`Shows the Websocket's latency.`),

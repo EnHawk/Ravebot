@@ -3,6 +3,7 @@ const User = require(`../schemas/balance`);
 // Imports
 
 module.exports = {
+    category: `economy`,
     data: new Discord.SlashCommandBuilder()
         .setName(`balance`)
         .setDescription(`Shows your balance or someone's balance`)
