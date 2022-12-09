@@ -3,6 +3,7 @@ const axios = require(`axios`).default;
 // Imports
 
 module.exports = {
+    scope: `global`,
     category: `other`,
     data: new Discord.SlashCommandBuilder()
         .setName(`inspire`)

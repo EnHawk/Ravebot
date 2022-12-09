@@ -2,6 +2,7 @@ const { Discord, client } = require(`../index`);
 // Imports
 
 module.exports = {
+    scope: `global`,
     category: `other`,
     data: new Discord.SlashCommandBuilder()
         .setName(`ping`)
