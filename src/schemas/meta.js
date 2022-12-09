@@ -30,7 +30,7 @@ const numberUniqueRequired = {
     type: Number,
     unique: true,
     required: true
-}
+};
 // Definitions
 
 module.exports = { str, strUnique, strRequired, strUniqueRequired, number, numberUnique, numberRequired, numberUniqueRequired };
