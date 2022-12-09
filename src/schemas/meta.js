@@ -7,7 +7,7 @@ const id = {
 const number = {
     type: Number,
     default: 0
-}
+};
 // Definitions
 
 module.exports = { id, number };
