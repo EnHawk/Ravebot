@@ -1,5 +1,5 @@
 const { Discord, client } = require(`../index`);
-// Module imports
+// Imports
 
 module.exports = {
     data: new Discord.SlashCommandBuilder()
@@ -21,4 +21,4 @@ module.exports = {
         await i.reply({ embeds: [ embed ] });
     }
 }
-// Module exports
+// Exports
