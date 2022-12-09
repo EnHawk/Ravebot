@@ -36,4 +36,4 @@ module.exports = {
         await i.reply({ embeds: [ embed ] });
     }
 };
-// Export
+// Exports
