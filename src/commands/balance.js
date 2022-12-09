@@ -3,6 +3,7 @@ const User = require(`../schemas/balance`);
 // Imports
 
 module.exports = {
+    scope: `global`,
     category: `economy`,
     data: new Discord.SlashCommandBuilder()
         .setName(`balance`)
@@ -14,7 +15,7 @@ module.exports = {
         ),
     async execute (i) {
         const user = i.options.getUser(`user`) || i.user;
-        const balance = await User.findOne({ userId: user.id }) || new User({ userId: user.id, wallet: 0, bank: 0 });
+        const balance = await User.findOne({ userId: user.id }) || new User({ userId: user.id });
         const embed = new Discord.EmbedBuilder()
             .setTitle(`${user.username}'s balance`)
             .setURL(`https://youtu.be/CK_BCMA9yoY`)
