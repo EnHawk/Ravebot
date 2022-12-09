@@ -16,4 +16,5 @@ module.exports = {
         
         await i.reply({ embeds: [ embed ] });
     }
-}
+};
+// Exports
