@@ -12,4 +12,4 @@ const schema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model(`strike`, schema);
-// Exports
+// Export
