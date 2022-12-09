@@ -1,9 +1,9 @@
 const { mongoose } = require(`../index`);
-const { id, number } = require(`./meta`);
+const { strUniqueRequired, number } = require(`./meta`);
 // Imports
 
 const schema = new mongoose.Schema({
-    userId: id,
+    userId: strUniqueRequired,
     wallet: number,
     bank: number
 });
