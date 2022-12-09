@@ -11,4 +11,4 @@ const number = {
 // Definitions
 
 module.exports = { id, number };
-// Exports
+// Export
