@@ -20,7 +20,7 @@ client.login(config.TOKEN)
     .catch(error => { return console.error(error) });
 // Discord.js part
 
-module.exports = { config, mongouse, Discord, client };
+module.exports = { config, mongoose, Discord, client };
 // Exports
 
 client.handleCommands = () => { require(`./utils/cmdHandler`) };
