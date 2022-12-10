@@ -66,4 +66,4 @@ module.exports = {
         user.send({ embeds: [ warningEmbed ] });
         logChannel.send({ embeds: [ caseEmbed ] });
     }
-}
+};
