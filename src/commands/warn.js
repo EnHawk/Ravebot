@@ -26,21 +26,14 @@ module.exports = {
         const user = i.options.getUser(`user`);
         const reason = i.options.getString(`reason`);
         const warning = await warningUser.findOne({ userId: user.id }) || new warningUser({ userId: user.id });
-        const reasonField = {
-            name: `Reason`,
-            value: reason,
-            inline: true
-        };
         const logChannel = i.guild.channels.cache.get(config.LOG_CHANNEL_ID);
         const warnEmbed = new Discord.EmbedBuilder()
             .setAuthor({ name: `${user.tag} has been warned.`, iconURL: user.displayAvatarURL() })
-            .addFields([ reasonField ])
+            .setDescription(`**Reason:** ${reason}`)
             .setColor(`#2f3136`);
         const warningEmbed = new Discord.EmbedBuilder()
-            .setTitle(`You have been warned in ${i.guild.name}`)
-            .setThumbnail(i.guild.iconURL())
-            .addFields([ reasonField ])
-            .setTimestamp()
+            .setAuthor({ name: `You have been warned in ${i.guild.name}.`,iconURL: i.guild.iconURL() })
+            .setDescription(`**Reason:** ${reason}`)
             .setColor(`Yellow`);
         const caseEmbed = new Discord.EmbedBuilder()
             .setAuthor({ name: `Warn | ${user.tag}`, iconURL: user.displayAvatarURL() })
@@ -55,13 +48,18 @@ module.exports = {
                     value: `${i.member.user}`,
                     inline: true
                 },
-                reasonField
+                {
+                    name: `Reason`,
+                    value: reason,
+                    inline: true
+                }
             ])
             .setFooter({ text: `ID: ${warning._id}` })
             .setTimestamp()
             .setColor(`Yellow`);
 
         warning.warnings += 1;
+        warning.__v += 1;
         warning.save();
 
         await i.reply({ embeds: [ warnEmbed ] });
