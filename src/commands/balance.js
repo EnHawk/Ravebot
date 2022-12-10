@@ -1,5 +1,5 @@
 const { Discord, mongoose } = require(`../index`);
-const User = require(`../schemas/balance`);
+const { balanceUser } = require(`../models/economy`);
 // Imports
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
         ),
     async execute (i) {
         const user = i.options.getUser(`user`) || i.user;
-        const balance = await User.findOne({ userId: user.id }) || new User({ userId: user.id });
+        const balance = await balanceUser.findOne({ userId: user.id }) || new balanceUser({ userId: user.id });
         const embed = new Discord.EmbedBuilder()
             .setTitle(`${user.username}'s balance`)
             .setURL(`https://youtu.be/CK_BCMA9yoY`)
@@ -31,7 +31,7 @@ module.exports = {
                     inline: true
                 }
             ])
-            .setColor(`DarkButNotBlack`);
+            .setColor(`#2f3136`);
         
         await i.reply({ embeds: [ embed ] });
     }

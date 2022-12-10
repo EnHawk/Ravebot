@@ -11,10 +11,10 @@ module.exports = {
     async execute (i) {
         const quote = await axios.get(`https://zenquotes.io/api/random`)
             .then(res => { return res.data })
-            .then(data => { return `*${data[0].q}*\n-${data[0].a}` });
+            .then(data => { return `***${data[0].q}***\n**-${data[0].a}**` });
         const embed = new Discord.EmbedBuilder()
             .setDescription(quote)
-            .setColor(`DarkButNotBlack`);
+            .setColor(`#2f3136`);
         
         await i.reply({ embeds: [ embed ] });
     }

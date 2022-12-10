@@ -51,7 +51,7 @@ client.on(`ready`, async () => {
         Routes.applicationGuildCommands(client.user.id, config.GUILD_ID),
         { body: commands.local }
     )
-    .then(() => { return console.log(`Successfully loaded ${commands.local.length} locally-scoped application (/) commands`) })
+    .then(() => { return console.log(`Successfully loaded ${commands.local.length} locally-scoped application (/) commands.`) })
     .catch(error => { return console.error(error) });
 });
 
