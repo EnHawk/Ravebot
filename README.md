@@ -1,10 +1,12 @@
-<h1 align="center">
+<div align="center">
   <b>
     <img src="https://cdn.discordapp.com/attachments/880382867283247124/985888398533361674/sticker_1622513385543.png" width="50%" height="50%">
     <br>
-    <a href="https://github.com/EnHawk/Ravebot">Ravebot's Official Source Code Repository</a>
+    <h1>
+      <a href="https://github.com/EnHawk/Ravebot">Ravebot's Official Source Code Repository</a>
+    </h1>
   </b>
-</h1>
+</div>
 
 # Releases
 * [v1.0.0](https://github.com/EnHawk/Ravebot/releases/tag/v1.0.0)
