@@ -1,8 +1,6 @@
-const { balanceSchema } = require(`../schemas/economy`);
-const { Model } = require(`../meta/templates`);
+const { mongoose } = require(`../index`);
+const schema = require(`../schemas/economy`);
 // Imports
 
-const balanceUser = Model(`balance`, balanceSchema);
-
-module.exports = { balanceUser };
+module.exports = mongoose.model(`balance`, schema);
 // Exports

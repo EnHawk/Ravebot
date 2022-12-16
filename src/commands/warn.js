@@ -1,5 +1,5 @@
 const { Discord, config } = require(`../index`);
-const { warningUser } = require(`../models/strike`);
+const User = require(`../models/strike`);
 // Imports
 
 module.exports = {
@@ -25,14 +25,14 @@ module.exports = {
     async execute (i) {
         const user = i.options.getUser(`user`);
         const reason = i.options.getString(`reason`);
-        const warning = await warningUser.findOne({ userId: user.id }) || new warningUser({ userId: user.id });
+        const warning = await User.findOne({ userId: user.id }) || new User({ userId: user.id });
         const logChannel = i.guild.channels.cache.get(config.LOG_CHANNEL_ID);
         const warnEmbed = new Discord.EmbedBuilder()
             .setAuthor({ name: `${user.tag} has been warned.`, iconURL: user.displayAvatarURL() })
             .setDescription(`**Reason:** ${reason}`)
-            .setColor(`#2f3136`);
+            .setColor(config.EMBED_COLOR);
         const warningEmbed = new Discord.EmbedBuilder()
-            .setAuthor({ name: `You have been warned in ${i.guild.name}.`,iconURL: i.guild.iconURL() })
+            .setAuthor({ name: `You have been warned in ${i.guild.name}.`, iconURL: i.guild.iconURL() })
             .setDescription(`**Reason:** ${reason}`)
             .setColor(`Yellow`);
         const caseEmbed = new Discord.EmbedBuilder()
@@ -54,11 +54,12 @@ module.exports = {
                     inline: true
                 }
             ])
-            .setFooter({ text: `ID: ${warning._id}` })
+            .setFooter({ text: `ID: ${user.id}` })
             .setTimestamp()
             .setColor(`Yellow`);
 
         warning.warnings += 1;
+        warning.total += 1;
         warning.__v += 1;
         warning.save();
 

@@ -1,4 +1,4 @@
-const { Discord } = require(`../index`);
+const { Discord, config } = require(`../index`);
 const axios = require(`axios`).default;
 // Imports
 
@@ -10,13 +10,13 @@ module.exports = {
         .setDescription(`Tells a motivational quotes`),
     async execute (i) {
         const embed = new Discord.EmbedBuilder()
-            .setColor(`#2f3136`);
+            .setColor(config.EMBED_COLOR);
 
-        return await axios.get(`https://zenquotes.io/api/random`)
+        await axios.get(`https://zenquotes.io/api/random`)
             .then(res => { return res.data[0] })
             .then(async data => {
                 embed.setDescription(`***${data.q}***\n**-${data.a}**`);
-                return await i.reply({ embeds: [ embed ] });
+                await i.reply({ embeds: [ embed ] });
             });
     }
 };

@@ -1,10 +1,10 @@
 const { strUniqueRequired } = require(`./String`);
+const { number } = require(`./Number`);
 const { mongoose } = require(`../index`);
 // Imports
 
 const userId = strUniqueRequired;
-const Schema = mongoose.Schema;
-const Model = mongoose.model;
+const __v = number;
 
-module.exports = { userId, Schema, Model };
+module.exports = { userId, __v };
 // Exports

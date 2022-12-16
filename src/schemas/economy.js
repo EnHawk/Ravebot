@@ -1,12 +1,12 @@
-const { userId, Schema } = require(`../meta/templates`);
+const { mongoose } = require(`../index`);
+const { userId, __v } = require(`../meta/templates`);
 const { number } = require(`../meta/Number`);
 // Imports
 
-const balanceSchema = new Schema({
+module.exports = new mongoose.Schema({
     userId,
     wallet: number,
-    bank: number
+    bank: number,
+    __v
 });
-
-module.exports = { balanceSchema };
 // Exports
