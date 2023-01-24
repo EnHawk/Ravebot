@@ -1,0 +1,31 @@
+name: Run
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+       
+      - name: Install dependencies
+        run: npm i
+        
+      - name: Create config.json
+        run: touch config.json
+        
+      - name: Edit config.json
+        run: echo ${{ secrets.CONFIG_ENV }} > config.json
+        
+      - name: Run program
+        run: node src/index.js
