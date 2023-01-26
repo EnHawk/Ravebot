@@ -1,5 +1,5 @@
 const config = require(`../config.json`)
-// Environment variables setup
+// Secret variables setup
 
 const mongoose = require(`mongoose`);
 mongoose.connect(config.DB_URI)
@@ -24,6 +24,8 @@ module.exports = { config, mongoose, Discord, client };
 // Exports
 
 client.handleCommands = () => { require(`./utils/cmdHandler`) };
-
 client.handleCommands();
+
+client.serve = require(`../server/app`);
+client.serve(config.PORT);
 // Handlers and stuff

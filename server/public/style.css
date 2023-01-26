@@ -1,0 +1,66 @@
+.container {
+    background: rgb(201, 4, 76);
+    color: white;
+    max-width: 360px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    margin: 100px auto 16px;
+    padding: 32px 24px;
+    border-radius: 6px;
+}
+
+h2 {
+    color: #fffe6e;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 300;
+    margin: 0 0 16px;
+}
+
+p {
+    line-height: 140%;
+    margin: 16px 0 24px;
+    font-size: 14px;
+}
+
+a {
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 16px;
+}
+
+#youtube {
+    background: #c80000;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#twitter {
+    background: #029eff;
+    border-radius: 18px;
+    font-family: Arial, Roboto, Helvetica, 'Segoe UI';
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#discord {
+    background: #586aea;
+    border-radius: 28px;
+    cursor: pointer;
+}
+
+.container,
+a {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 250), 0 1px 2px rgba(0, 0, 0, 255);
+}
+
+.logo {
+    text-align: center;
+}
