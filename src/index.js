@@ -2,8 +2,14 @@ const config = require(`../config.json`)
 // Secret variables setup
 
 const mongoose = require(`mongoose`);
-mongoose.connect(config.DB_URI)
-    .then(() => console.log(`Successfully connected to MongoDB.`));
+
+async function connect(uri) {
+    await mongoose.connect(uri)
+        .then(() => { return console.log(`Successfully connected to MongoDB.`) })
+        .catch(error => { return console.error(error) });
+};
+
+connect(config.DB_URI);
 // MongoDB setup
 
 const Discord = require(`discord.js`);
