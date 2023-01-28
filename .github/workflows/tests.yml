@@ -27,9 +27,6 @@ jobs:
       - name: 📦 Install Dependencies
         run: npm i
 
-      - name: 📦 Install Dev Dependencies
-        run: npm i -D
-        
       - name: 🔎 Start The Test
         run: node __tests__/connection
   
@@ -54,9 +51,6 @@ jobs:
 
       - name: 📦 Install Dependencies
         run: npm i
-
-      - name: 📦 Install Dev Dependencies
-        run: npm i -D
 
       - name: 🔎 Start The Test
         run: node __tests__/listen
@@ -83,8 +77,5 @@ jobs:
       - name: 📦 Install Dependencies
         run: npm i
 
-      - name: 📦 Install Dev Dependencies
-        run: npm i -D
-        
       - name: 🔎 Start The Test
         run: node __tests__/login
