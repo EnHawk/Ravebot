@@ -4,7 +4,7 @@ const client = new Client({
     allowedMentions: { parse: [ `roles`, `users` ] }
 });
 const config = require(`../config.json`);
-const test = require(`./index`);
+const test = require(`./index.mjs`);
 
 client.login(config.TOKEN)
     .then(() => console.log(`Test: ${test.login}\nStatus: ${test.status[0]}`))

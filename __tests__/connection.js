@@ -1,6 +1,6 @@
 const mongoose = require(`mongoose`);
 const config = require(`../config.json`);
-const test = require(`./index`);
+const test = require(`./index.mjs`);
 
 (async () => {
     try {
