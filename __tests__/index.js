@@ -1,4 +1,4 @@
-const chalk = await import(`chalk`);
+const chalk = import(`chalk`);
 // Import
 
 module.exports = {
