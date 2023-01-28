@@ -5,6 +5,9 @@
     <h1>
       <a href="https://github.com/EnHawk/Ravebot">Ravebot's Official Source Code Repository</a>
     </h1>
+    <a href="https://github.com/EnHawk/Ravebot/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/EnHawk/Ravebot?label=License&logo=github" alt="repo license" />
+    </a>
     <a href="https://github.com/EnHawk/Ravebot/actions/workflows/tests.yml">
       <img src="https://github.com/EnHawk/Ravebot/actions/workflows/tests.yml/badge.svg" alt="test status" />
     </a>
