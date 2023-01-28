@@ -1,10 +1,19 @@
 <div align="center">
   <b>
-    <img src="https://cdn.discordapp.com/attachments/880382867283247124/985888398533361674/sticker_1622513385543.png" width="50%" height="50%">
+    <img src="https://cdn.discordapp.com/attachments/880382867283247124/985888398533361674/sticker_1622513385543.png" width="50%" height="50%" />
     <br>
     <h1>
       <a href="https://github.com/EnHawk/Ravebot">Ravebot's Official Source Code Repository</a>
     </h1>
+    <a href="https://dsc.gg/ravemondc">
+      <img src="https://img.shields.io/discord/875566092850974780?color=5865f2&label=Chat&logo=discord&logoColor=white" />
+    </a>
+    <a href="https://www.youtube.com/@ravemongaming_reborn">
+      <img src="https://img.shields.io/youtube/channel/subscribers/UC5UFIqxUv0L1Weg8bAPBlZg" />
+    </a>
+    <a href="https://twitter.com/RavemonGaming">
+      <img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2FRavemonGaming" />
+    </a>
   </b>
 </div>
 
@@ -23,8 +32,8 @@ If you're going to install the source code for your workspace, here are some gui
      */
 
     "GUILD_ID": "<(OPTIONAL)>",
-    /* This is optional which means you don't actually change it.
-     * Unless you want to register an application (/) command in a specific guild.
+    /* This is optional which means you don't actually have to change it.
+     * Unless you want to register application (/) command in a specific guild.
      */
 
     "DB_URI": "<DATABASE_URI>"
@@ -33,19 +42,3 @@ If you're going to install the source code for your workspace, here are some gui
      */
 }
 ```
-
-<h1 align="center">
-  Social Media
-  <br>
-  <a href="https://discord.gg/d4MvgAAx7B">
-    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321471127863306/discord-mark-blue.png" width="20%" height="20%">
-  </a>
-
-  <a href="https://www.youtube.com/@ravemongaming">
-    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321966483542016/youtube-logo.png">
-  </a>
-
-  <a href="https://twitter.com/RavemonGaming">
-    <img src="https://cdn.discordapp.com/attachments/819019531438522369/1049321470838448190/Twitter-logo.png" width="18%" height="18%">
-  </a>
-</h1>

@@ -1,0 +1,81 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  connect:
+    name: 📡 MongoDB Connection
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v3
+        
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      
+      - name: 🔒 Initialize Environment File
+        run: touch config.json
+        
+      - name: 🔒 Setup Environment Variables
+        run: echo ${{ secrets.CONFIG_ENV }} > config.json
+      
+      - name: 📦 Install Dependencies
+        run: npm i
+        
+      - name: 🔎 Start The Test
+        run: node __tests__/connection
+  
+  listen:
+    name: 📡 Server Listen
+    needs: connect
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v3
+
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      
+      - name: 🔒 Initialize Environment File
+        run: touch config.json
+
+      - name: 🔒 Setup Environment Variables
+        run: echo ${{ secrets.CONFIG_ENV }} > config.json
+
+      - name: 📦 Install Dependencies
+        run: npm i
+
+      - name: 🔎 Start The Test
+        run: node __tests__/listen
+
+  login:
+    name: 🤖 Bot Login
+    needs: listen
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚 Checkout
+        uses: actions/checkout@v3
+
+      - name: 🟢 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      
+      - name: 🔒 Initialize Environment File
+        run: touch config.json
+
+      - name: 🔒 Setup Environment Variables
+        run: echo ${{ secrets.CONFIG_ENV }} > config.json
+
+      - name: 📦 Install Dependencies
+        run: npm i
+
+      - name: 🔎 Start The Test
+        run: node __tests__/login

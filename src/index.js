@@ -23,9 +23,9 @@ client.login(config.TOKEN)
 module.exports = { config, mongoose, Discord, client };
 // Exports
 
-client.handleCommands = () => { require(`./utils/cmdHandler`) };
+client.handleCommands = () => require(`./utils/cmdHandler`);
 client.handleCommands();
 
-client.serve = require(`../server/app`);
+client.serve = (port) => require(`../server/app`)(port); 
 client.serve(config.PORT);
 // Handlers and stuff

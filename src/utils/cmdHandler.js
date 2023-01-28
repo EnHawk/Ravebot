@@ -44,15 +44,15 @@ client.on(`ready`, async () => {
         Routes.applicationCommands(client.user.id),
         { body: commands.global }
     )
-    .then(() => { return console.log(`Successfully loaded ${commands.global.length} globally-scoped application (/) commands.`) })
-    .catch(error => { return console.error(error) });
+        .then(() => { return console.log(`Successfully loaded ${commands.global.length} globally-scoped application (/) commands.`) })
+        .catch(error => { return console.error(error) });
 
     await rest.put(
         Routes.applicationGuildCommands(client.user.id, config.GUILD_ID),
         { body: commands.local }
     )
-    .then(() => { return console.log(`Successfully loaded ${commands.local.length} locally-scoped application (/) commands.`) })
-    .catch(error => { return console.error(error) });
+        .then(() => { return console.log(`Successfully loaded ${commands.local.length} locally-scoped application (/) commands.`) })
+        .catch(error => { return console.error(error) });
 });
 
 client.on(`interactionCreate`, interaction => {
