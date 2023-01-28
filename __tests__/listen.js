@@ -1,7 +1,7 @@
 const express = require(`express`);
 const app = express();
 const config = require(`../config.json`);
-const test = require(`./index.mjs`);
+const test = require(`./index`);
 
 try {
     app.listen(config.PORT, () => {
