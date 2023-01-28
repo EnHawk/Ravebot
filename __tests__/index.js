@@ -1,10 +1,10 @@
-const { underline, bgGreen, bgRed } = require(`ansi-colors`);
+const { underline, green, red } = require(`ansi-colors`);
 // Import
 
 module.exports = {
     connection: underline(`MongoDB Connection`),
     listen: underline(`Server Listen`),
     login: underline(`Bot Login`),
-    status: [ bgGreen(`Passing`), bgRed(`Failing`) ]
+    status: [ green(`Passing`), red(`Failing`) ]
 };
 // Export

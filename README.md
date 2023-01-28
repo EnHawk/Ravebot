@@ -5,14 +5,17 @@
     <h1>
       <a href="https://github.com/EnHawk/Ravebot">Ravebot's Official Source Code Repository</a>
     </h1>
+    <a href="https://github.com/EnHawk/Ravebot/actions/workflows/tests.yml">
+      <img src="https://github.com/EnHawk/Ravebot/actions/workflows/tests.yml/badge.svg" alt="test status" />
+    </a>
     <a href="https://dsc.gg/ravemondc">
-      <img src="https://img.shields.io/discord/875566092850974780?color=5865f2&label=Chat&logo=discord&logoColor=white" />
+      <img src="https://img.shields.io/discord/875566092850974780?color=5865f2&label=Chat&logo=discord&logoColor=white" alt="discord server" />
     </a>
     <a href="https://www.youtube.com/@ravemongaming_reborn">
-      <img src="https://img.shields.io/youtube/channel/subscribers/UC5UFIqxUv0L1Weg8bAPBlZg" />
+      <img src="https://img.shields.io/youtube/channel/subscribers/UC5UFIqxUv0L1Weg8bAPBlZg" alt="youtube channel" />
     </a>
     <a href="https://twitter.com/RavemonGaming">
-      <img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2FRavemonGaming" />
+      <img src="https://img.shields.io/twitter/url?label=Twitter&style=social&url=https%3A%2F%2Ftwitter.com%2FRavemonGaming" alt="twitter" />
     </a>
   </b>
 </div>
